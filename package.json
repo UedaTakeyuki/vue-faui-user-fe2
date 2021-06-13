@@ -1,8 +1,14 @@
 {
   "name": "vue-faui-user-fe2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "src/build-entry.js",
+  "files": [
+    "src/components/*",
+    "src/views/account/*",
+    "src/views/purchase/*",
+    "src/build-entry.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
