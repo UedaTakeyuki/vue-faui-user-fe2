@@ -1,1 +1,2 @@
-2020.06.13 start from vue-faui-user-fe
+2021.06.13 start from vue-faui-user-fe
+2021.06.04 version 1.0.7, first version of feature completed

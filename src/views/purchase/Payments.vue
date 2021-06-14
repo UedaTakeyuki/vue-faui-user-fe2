@@ -94,7 +94,7 @@
 
 <script>
 /* eslint no-unused-vars: 0 */
-import DateString from '@/components/DateString'
+import DateString from '../../components/DateString'
 import firebase from "firebase/app";
 import "firebase/auth";
 import axios from 'axios'

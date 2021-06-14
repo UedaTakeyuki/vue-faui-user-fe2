@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import ContentsList from '@/components/ContentsList'
+import ContentsList from '../../components/ContentsList'
 export default {
   components:{
     ContentsList,
