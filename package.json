@@ -1,12 +1,15 @@
 {
   "name": "vue-faui-user-fe2",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "src/build-entry.js",
   "files": [
     "src/components/*",
+    "src/components.cdn/*",
     "src/views/account/*",
+    "src/views/account.cdn/*",
     "src/views/purchase/*",
+    "src/views/purchase.cdn/*",
     "src/build-entry.js"
   ],
   "scripts": {
