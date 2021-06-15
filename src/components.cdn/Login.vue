@@ -13,10 +13,12 @@
 
 //import firebase from "firebase";
 //import firebaseui from "firebaseui";
-import "firebaseui/dist/firebaseui.css";
-import firebase from "firebase/app";
-import "firebase/auth";
-import * as firebaseui from 'firebaseui';
+
+//import "firebaseui/dist/firebaseui.css";
+//import firebase from "firebase/app";
+//import "firebase/auth";
+//import * as firebaseui from 'firebaseui';
+import * as firebase from 'firebase'
 import EmailVerificationRequest from './EmailVerificationRequest.vue'
 
 //import "firebase/firestore";
@@ -38,7 +40,7 @@ export default {
     },
   },
   mounted() {
-    console.log("login firebase:", this.firebase)
+    console.log("login firebase:", firebase)
     let ui = firebaseui.auth.AuthUI.getInstance();
     let uiConfig = {
       signInSuccessUrl: "/",
