@@ -1,9 +1,13 @@
 {
   "name": "vue-faui-user-fe2",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "",
   "main": "src/build-entry.js",
   "files": [
+    "account.js",
+    "accountCDN.js",
+    "login.js",
+    "loginCDN.js",
     "src/components/*",
     "src/components.cdn/*",
     "src/views/account/*",
