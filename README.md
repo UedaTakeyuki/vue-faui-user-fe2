@@ -40,3 +40,4 @@ Github [issues](https://github.com/UedaTakeyuki/vue-faui-user-fe2/issues) are av
 
 ## History
 - 1.0.0  2021.06.26 created from https://github.com/UedaTakeyuki/vue-faui-user-fe
+- 1.1.1  2021.06.28 interface change
