@@ -1,15 +1,15 @@
-import PurchaseFrontCDN    from './src/views.cdn/purchase/PurchaseFront.vue';
-import PurchaseRoutesCDN    from './src/views.cdn/purchase/purchase.route.js'
+import PurchaseFront    from './src/views/purchase/PurchaseFront.vue';
+import PurchaseRoutes   from './src/views/purchase/purchase.route.js'
 
 
 // Named export
 export {
-	PurchaseFrontCDN,
-	PurchaseRoutesCDN,
+	PurchaseFront,
+	PurchaseRoutes,
 };
 
 // Default export
 export default {
-	PurchaseFrontCDN,
-	PurchaseFrontCDN,
+	PurchaseFront,
+	PurchaseRoutes,
 };
