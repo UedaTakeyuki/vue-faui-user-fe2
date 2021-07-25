@@ -29,7 +29,7 @@
           <v-list-item
             v-for="payment in payments"
             :key="payment.ID"
-            @click="aho(bind)"
+            @click="aho()"
           >
             <v-list-item-content>
               <v-expansion-panels>
