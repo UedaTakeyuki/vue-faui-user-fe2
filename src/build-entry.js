@@ -10,7 +10,8 @@ import Login    from './components/Login.vue'
 import LoginCDN from './components.cdn/Login.vue'
 import EmailVerificationRequest    from './components/EmailVerificationRequest.vue'
 import EmailVerificationRequestCDN from './components.cdn/EmailVerificationRequest.vue'
-
+import IdToken from './mixins/IdToken.js'
+import IdTokenCDN from './mixins.cdn/IdToken.js'
 
 // Named export
 export {
@@ -25,7 +26,9 @@ export {
 	Login,
 	LoginCDN,
 	EmailVerificationRequest,
-	EmailVerificationRequestCDN
+	EmailVerificationRequestCDN,
+	IdToken,
+	IdTokenCDN,
 };
 
 // Default export
