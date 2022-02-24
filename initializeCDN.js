@@ -16,6 +16,9 @@ export default {
       data: { 
         $isLogin: false,
         $isEmailVerified: false,
+        $displayName: "",
+        $user_email: "",
+        $user_id: "",
       }
     });
     let computed = {
@@ -52,6 +55,9 @@ export default {
       data: { 
         $isLogin: false,
         $isEmailVerified: false,
+        $displayName: "",
+        $user_email: "",
+        $user_id: "",
 /*
         $server: process.env.VUE_APP_serverProtocol + "://" 
                  + process.env.VUE_APP_serverHost +"."

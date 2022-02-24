@@ -44,3 +44,4 @@ Github [issues](https://github.com/UedaTakeyuki/vue-faui-user-fe2/issues) are av
 - 1.1.1  2021.06.28 interface change (backword compatibility has still remained)
 - 1.2.1  2021.06.29 interface change (backword compatibility has still remained)
 - 1.3.1  2022.02.19 add ``getIdToken()`` async function
+- 1.3.2  2022.02.24 fix: $displayName, $user_email, $user_id were not updated after login.
