@@ -29,6 +29,10 @@ export default {
   components: {
     EmailVerificationRequest
   },
+  props: {
+    tosUrl: {type: String, default: ""},
+    privacyPolicyUrl: {type: String, default: ""},
+  },
   data: function () {
     return {
 //      is_login: false,
@@ -50,6 +54,15 @@ export default {
 //      signInOptions: [this.firebase.auth.EmailAuthProvider.PROVIDER_ID],
       credentialHelper: firebaseui.auth.CredentialHelper.NONE
     };
+    // add tosUrl
+    if (this.tosUrl != ""){
+      uiConfig.tosUrl = this.tosUrl
+    }
+    // add privacyPolicyUrl
+    if (this.privacyPolicyUrl != ""){
+      uiConfig.privacyPolicyUrl = this.privacyPolicyUrl
+    }
+    console.log("uiConfig", uiConfig)
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         // set user globals
