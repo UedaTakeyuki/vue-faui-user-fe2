@@ -61,7 +61,7 @@ export default {
     // add privacyPolicyUrl
     if (this.privacyPolicyUrl != ""){
       uiConfig.privacyPolicyUrl = this.privacyPolicyUrl
-    }
+    } 
     console.log("uiConfig", uiConfig)
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
