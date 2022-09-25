@@ -4,3 +4,4 @@
 2021.07.25 fix: remove redundant variable
 2022.02.24 version 1.3.2
 2022.09.18 version 1.4 add tos and privacy
+2022.09.25 version 1.4.10 sendEmailVerification

@@ -43,24 +43,6 @@ export default {
   },
   mounted() {
     console.log("login firebase:", this.firebase)
-    let ui = firebaseui.auth.AuthUI.getInstance();
-    let uiConfig = {
-      signInSuccessUrl: "/",
-      signInOptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID, 
-                      /* firebase.auth.FacebookAuthProvider.PROVIDER_ID */
-                     ],
-//      signInOptions: [this.firebase.auth.EmailAuthProvider.PROVIDER_ID],
-      credentialHelper: firebaseui.auth.CredentialHelper.NONE
-    };
-    // add tosUrl
-    if (this.tosUrl != ""){
-      uiConfig.tosUrl = this.tosUrl
-    }
-    // add privacyPolicyUrl
-    if (this.privacyPolicyUrl != ""){
-      uiConfig.privacyPolicyUrl = this.privacyPolicyUrl
-    }
-    console.log("uiConfig", uiConfig)
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         // set user globals
@@ -71,6 +53,54 @@ export default {
 
         // set $internalUserId
       } else {
+        let ui = firebaseui.auth.AuthUI.getInstance();
+        // ACS for sendEmailVerification() 
+        let actionCodeSettings = {
+        //  url: 'https://www.example.com/?email=' + firebase.auth().currentUser.email,
+          url: location.href,
+        /*  iOS: {
+            bundleId: 'com.example.ios'
+          },
+          android: {
+            packageName: 'com.example.android',
+            installApp: true,
+            minimumVersion: '12'
+          },*/
+          handleCodeInApp: true
+        };
+        let uiConfig = {
+          callbacks: {
+            signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+              // User successfully signed in.
+              // Return type determines whether we continue the redirect automatically
+              // or whether we leave that to developer to handle.
+              if (!firebase.auth().currentUser.emailVerified){
+                firebase.auth().currentUser.sendEmailVerification(actionCodeSettings);
+                return false;
+              }
+              return true;
+            },
+            uiShown: function() {
+              // The widget is rendered.
+              // Hide the loader.
+            }
+          },
+          signInSuccessUrl: "/",
+          signInOptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID, 
+                          /* firebase.auth.FacebookAuthProvider.PROVIDER_ID */
+                        ],
+    //      signInOptions: [this.firebase.auth.EmailAuthProvider.PROVIDER_ID],
+          credentialHelper: firebaseui.auth.CredentialHelper.NONE
+        };
+        // add tosUrl
+        if (this.tosUrl != ""){
+          uiConfig.tosUrl = this.tosUrl
+        }
+        // add privacyPolicyUrl
+        if (this.privacyPolicyUrl != ""){
+          uiConfig.privacyPolicyUrl = this.privacyPolicyUrl
+        }
+        console.log("uiConfig", uiConfig)
         if (!ui) {
           ui = new firebaseui.auth.AuthUI(firebase.auth());
           ui.start("#firebaseui-auth-container", uiConfig);
