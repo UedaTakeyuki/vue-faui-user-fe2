@@ -1,6 +1,6 @@
 {
   "name": "vue-faui-user-fe2",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "description": "",
   "main": "src/build-entry.js",
   "files": [
