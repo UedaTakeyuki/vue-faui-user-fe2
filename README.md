@@ -1,4 +1,7 @@
-  # Vue Firebase auth ui user management frontend pack
+# 2023.03.11: Deprecated the successor is [vue2-faui-user-fe](https://www.npmjs.com/package/vue2-faui-user-fe) for Vue2, for Vue3 now under planning.
+- 2023.03.11: [vue2-faui-user-fe](https://www.npmjs.com/package/vue2-faui-user-fe) is about half size more compact of [vue-faui-user-fe2](https://www.npmjs.com/package/vue-faui-user-fe2) and be cleaned there usage up. This is for Vue2 only, Vue3 and Vuetify3 support is now under planning.
+
+# Vue Firebase auth ui user management frontend pack
 Provide following feature to your vue app.
 - Sign Up / Sign In by firebase auth ui with email with verification request(original of this package).
 - Account Management (cange name and email address, delete account, etc).
